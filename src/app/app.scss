@@ -1,0 +1,136 @@
+/* Topbar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+
+  .left, .right {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .brand {
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: var(--text);
+  }
+}
+
+/* Layout wrapper */
+.layout {
+  display: block;
+  padding: 1.25rem;
+  min-height: calc(100vh - 56px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem .9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.btn:hover { box-shadow: var(--shadow-md); }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--primary-600); border-color: var(--primary-600); }
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text);
+}
+.btn-ghost:hover {
+  background: rgba(0,0,0,.04);
+  border-color: transparent;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+}
+
+/* Form fields */
+label { font-size: .9rem; color: var(--text); }
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+input, select, textarea {
+  padding: .6rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, .15);
+}
+.help { color: var(--muted); font-size: .85rem; }
+.error { color: var(--danger); font-size: .85rem; }
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.table th, .table td {
+  padding: .75rem .75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: .95rem;
+}
+.table thead th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #111827;
+}
+.table tbody tr:hover { background: #fafbff; }
+.table tbody tr:last-child td { border-bottom: none; }
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin: .75rem 0 1rem;
+}

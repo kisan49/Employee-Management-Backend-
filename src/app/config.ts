@@ -1,0 +1,1 @@
+export const DEV_MODE = true; // set to false to use real backend
